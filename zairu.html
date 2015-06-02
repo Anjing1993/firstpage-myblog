@@ -1,0 +1,59 @@
+<html> 
+<head> 
+<title>正在载入...</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+<style>
+	#load_head{position:relative;left:400px;top:80px;z-index:1;}
+	#content{position:relative;bottom:430px;right:20px;z-index:2}
+</style>
+</head> 
+
+<body bgcolor="#C43147" leftmargin="0" topmargin="0"> <div id="load_head"><img src="images/未标题-1.gif"/></div>
+
+<div id="content">
+<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%"> 
+<tr> 
+	
+    
+        <form name=loading> 
+            <td align=center> 
+            <p><font color=#C43147>正在载入首页，请稍候.......</font></p> 
+            <p> 
+            <input type=text name=chart size=46 style="font-family:Arial; 
+            font-weight:bolder; color:gray; 
+            background-color:white; padding:0px; border-style:none;"> 
+            <br> 
+            <input type=text name=percent size=20 style="font-family:Arial; 
+            color:gray; text-align:center; 
+            border-width:medium; border-style:none;"> 
+       
+<script>
+	var bar = 0 
+	var line = "||" 
+	var amount ="||" 
+	
+	count() 
+	
+	function count(){ 
+		bar= bar+2 
+		amount =amount + line 
+		
+		document.loading.chart.value=amount 
+		document.loading.percent.value=bar+"%" 
+		
+		if (bar<99) 
+		{setTimeout("count()",100);} 
+		else 
+		{window.location = "index.html";} 
+} 
+</script> 
+</p> 
+</td> 
+</form> 
+</tr> 
+</table> 
+</div>
+</body> 
+</html> 
+
+
